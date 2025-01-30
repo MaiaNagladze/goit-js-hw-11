@@ -52,7 +52,7 @@ const onSearchFormeSubmit = event => {
 
     }) 
     .catch(error => {
-        loader.classList.add('hidden'); 
+        loader.classList.remove('hidden');
         iziToast.error({
             title: 'Error',
             message: 'An error occurred. Please try again!',
@@ -62,6 +62,7 @@ const onSearchFormeSubmit = event => {
     })
     .finally(() => {
         searchForm.reset();
+        loader.classList.add('hidden'); 
     });
 };
 
