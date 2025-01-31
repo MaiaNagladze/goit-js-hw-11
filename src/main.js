@@ -16,7 +16,7 @@ const loader = document.querySelector('#loader-js');
 
 let lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250 });
 
-const onSearchFormeSubmit = event => {
+const onSearchFormSubmit = event => {
     event.preventDefault();
 
     const searchedQuery = inputSearchImages.value.trim();
@@ -47,7 +47,6 @@ const onSearchFormeSubmit = event => {
         }
 
         resultsDiv.innerHTML = data.hits.map(createGalleryCardTemplate).join('');
-
         lightbox.refresh();
 
     }) 
@@ -65,4 +64,4 @@ const onSearchFormeSubmit = event => {
     });
 };
 
-searchForm.addEventListener('submit', onSearchFormeSubmit);
+searchForm.addEventListener('submit', onSearchFormSubmit);

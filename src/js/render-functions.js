@@ -2,7 +2,7 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css"; 
 
 export const createGalleryCardTemplate = image => {
-    return `<div class="gallery">
+    return `<div class="gallery-item">
                    <a href='${image.largeImageURL}'>
                    <img src='${image.webformatURL}' alt='${image.tags}'/>
                    </a>
@@ -12,8 +12,7 @@ export const createGalleryCardTemplate = image => {
                     <p class='img-comment'><b class='img-comment-title'>Comments</b>: ${image.comments}</p>
                     <p class='img-comment'><b class='img-comment-title'>Downloads</b>: ${image.downloads}</p>
                   </div>
-                </div>
-                <button id="load-more" class="hidden">Load more</button>`;
+                </div>`
 };
 
    
